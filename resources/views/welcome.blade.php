@@ -98,7 +98,7 @@
     <div class="flex flex-col space-y-6">
         
         <div class="text-gray-700 font-semibold">
-            Dipercaya 3500+ di Indonesia
+            Solusi terbaik untuk Indonesia
         </div>
 
         <div class="flex items-center justify-between">
