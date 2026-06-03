@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/logoe.png') }}">
     <title>EcoCash - Kelola Sampah Jadi Uang</title>
     
     {{-- <link rel="stylesheet" href="{{ asset('css/globals.css') }}">
@@ -502,7 +503,7 @@
             <div>
                 <h4 class="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">Layanan</h4>
                 <ul class="space-y-3 text-gray-600 text-sm">
-                    <li><a href="#" class="hover:text-teal-600">Aplikasi Mobi;e</a></li>
+                    <li><a href="#" class="hover:text-teal-600">Aplikasi Mobile</a></li>
                     <li><a href="#" class="hover:text-teal-600">Smart RVM</a></li>
                     <li><a href="#" class="hover:text-teal-600">Lokasi Drop Point</a></li>
                     <li><a href="#" class="hover:text-teal-600">Ecocash Bisinis</a></li>
@@ -536,7 +537,7 @@
                     <a href="#" class="hover:opacity-80 transition">
                         <img src="{{ asset('assets/img/link.png') }}" class="w-8 h-8" alt="LinkedIn">
                     </a>
-                    <a href="#" class="hover:opacity-80 transition">
+                    <a href="https://www.instagram.com/ecocash.id?igsh=MWQ3dnhtODN6dXJxOA==" class="hover:opacity-80 transition">
                         <img src="{{ asset('assets/img/Instagram.png') }}" class="w-8 h-8" alt="Instagram">
                     </a>
                     <a href="#" class="hover:opacity-80 transition">
