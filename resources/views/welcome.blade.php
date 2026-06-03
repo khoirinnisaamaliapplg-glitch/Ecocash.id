@@ -26,7 +26,7 @@
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<<nav class="bg-white shadow-sm w-full sticky top-0 z-50" x-data="{ openSidebar: false }">
+b<nav class="bg-white shadow-sm w-full sticky top-0 z-50" x-data="{ openSidebar: false }">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10 py-4">
         
         <div class="flex items-center">
