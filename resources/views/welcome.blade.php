@@ -25,96 +25,112 @@
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<nav class="bg-white shadow-sm w-full" x-data="{ openSidebar: false }">
-    <div class="max-w-7xl mx-auto flex items-center px-4 md:px-10 py-4">
+<<nav class="bg-white shadow-sm w-full sticky top-0 z-50" x-data="{ openSidebar: false }">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-10 py-4">
         
-        <div class="flex items-center mr-12">
-            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-10">
+        <div class="flex items-center">
+            <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-10 w-auto">
         </div>
 
         <div class="hidden md:flex items-center space-x-8">
             @foreach(['Cara Kerja', 'Solusi', 'Edukasi', 'Partner'] as $item)
-                <div class="relative group">
-                    <button class="flex items-center text-gray-700 hover:text-teal-500 font-medium transition">
-                        {{ $item }}
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                </div>
+                <a href="#" class="text-gray-600 hover:text-teal-600 font-medium transition duration-200">
+                    {{ $item }}
+                </a>
             @endforeach
         </div>
 
-        <button class="md:hidden ml-auto p-2 text-gray-700" @click="openSidebar = true">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
-
-        <div class="hidden md:flex items-center space-x-6 ml-auto">
-            <div class="flex items-center text-gray-600 cursor-pointer">
-                <span>🌐 ID</span>
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-            </div>
-            <a href="https://wa.me/nomor-anda" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2 rounded-lg flex items-center shadow-md transition font-semibold">
-                <img src="{{ asset('assets/img/wa.png') }}" alt="WhatsApp" class="w-5 h-5 mr-2">
+        <div class="hidden md:flex items-center space-x-6">
+            <button class="text-gray-600 hover:text-teal-600 font-medium flex items-center">
+                🌐 ID <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <a href="https://wa.me/nomor-anda" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-full flex items-center shadow-lg shadow-teal-500/30 transition-all font-semibold">
                 WhatsApp kami
             </a>
         </div>
+
+        <button class="md:hidden p-2 text-gray-700" @click="openSidebar = true">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
     </div>
 
-    <div x-show="openSidebar" class="fixed inset-0 z-50 md:hidden" x-cloak>
-        <div class="absolute inset-0 bg-gray-900 bg-opacity-50" @click="openSidebar = false"></div>
+    <div x-show="openSidebar" 
+         x-transition:enter="transition ease-out duration-300"
+         x-transition:enter-start="opacity-0 transform translate-x-full"
+         x-transition:enter-end="opacity-100 transform translate-x-0"
+         x-transition:leave="transition ease-in duration-200"
+         x-transition:leave-start="opacity-100 transform translate-x-0"
+         x-transition:leave-end="opacity-0 transform translate-x-full"
+         class="fixed inset-0 z-50" x-cloak>
         
-        <div class="absolute right-0 top-0 h-full w-64 bg-white p-6 shadow-2xl">
-            <button class="mb-6 text-gray-600" @click="openSidebar = false">✕ Tutup</button>
-            <div class="flex flex-col space-y-6">
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm" @click="openSidebar = false"></div>
+        
+        <div class="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-2xl p-6 flex flex-col">
+            <div class="flex items-center justify-between mb-8">
+                <span class="font-bold text-lg">Menu</span>
+                <button @click="openSidebar = false" class="p-2 rounded-full hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            
+            <div class="flex flex-col space-y-4">
                 @foreach(['Cara Kerja', 'Solusi', 'Edukasi', 'Partner'] as $item)
-                    <button class="text-left text-gray-700 font-medium">{{ $item }}</button>
-                @endforeach
-                <div class="pt-6 border-t">
-                    <a href="https://wa.me/nomor-anda" class="bg-teal-500 text-white px-5 py-3 rounded-lg flex items-center justify-center font-semibold">
-                        WhatsApp kami
+                    <a href="#" class="text-lg text-gray-700 hover:text-teal-600 font-medium py-2 border-b border-gray-50">
+                        {{ $item }}
                     </a>
-                </div>
+                @endforeach
+            </div>
+
+            <div class="mt-auto pt-6 border-t">
+                <a href="https://wa.me/nomor-anda" class="w-full bg-teal-500 text-white py-3 rounded-xl flex items-center justify-center font-semibold hover:bg-teal-600 transition">
+                    Hubungi via WhatsApp
+                </a>
             </div>
         </div>
     </div>
 </nav>
-  <section class="grid grid-cols-1 lg:grid-cols-2 relative w-full py-20 bg-cover bg-center" 
-         style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%), url('{{ asset('assets/img/br.jpeg') }}');">
+<section class="relative w-full py-16 md:py-24 bg-cover bg-center" 
+         style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 60%, transparent 100%), url('{{ asset('assets/img/br.jpeg') }}');">
     
-    <div class="relative max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center">
+    <div class="max-w-7xl mx-auto px-6 md:px-10">
         
-        <div class="md:w-1/2 space-y-6">
-            <h1 class="text-5xl font-bold text-gray-900 leading-tight">
-                Ubah Sampah Jadi Uang
-            </h1>
-            <p class="text-lg text-gray-700">
-                Platform pengelolaan sampah berbasis AI, IoT, dan ekonomi sirkular untuk menciptakan lingkungan yang lebih bersih dan bernilai ekonomi.
-            </p>
+        <div class="flex flex-col md:flex-row items-center">
             
-            <div class="flex space-x-4 pt-4">
-                <button class="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition">
-                    Mulai Sekarang
-                </button>
-                <button class="border border-teal-500 text-teal-500 hover:bg-teal-50 px-8 py-3 rounded-lg font-semibold transition">
-                    Pelajari lebih lanjut
-                </button>
+            <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                    Ubah Sampah Jadi Uang
+                </h1>
+                <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                    Platform pengelolaan sampah berbasis AI, IoT, dan ekonomi sirkular untuk menciptakan lingkungan yang lebih bersih dan bernilai ekonomi.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start pt-2">
+                    <button class="bg-teal-500 hover:bg-teal-600 text-white px-8 py-3 rounded-lg font-semibold transition w-full sm:w-auto">
+                        Mulai Sekarang
+                    </button>
+                    <button class="border border-teal-500 text-teal-500 hover:bg-teal-50 px-8 py-3 rounded-lg font-semibold transition w-full sm:w-auto">
+                        Pelajari lebih lanjut
+                    </button>
+                </div>
+
+                <div class="pt-6 flex flex-col items-center md:items-start space-y-3">
+                    <div class="text-yellow-400 text-2xl md:text-3xl">
+                        ★★★★★
+                    </div>
+                    <div>
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="Logo Partner" class="h-8 md:h-10 opacity-70">
+                    </div>
+                </div>
             </div>
 
-            <div class="pt-6 space-y-2">
-                <div class="text-yellow-400 text-4xl flex items-center">
-                    ★★★★★
-                    <span class="text-gray-600 text-sm ml-3 font-medium"></span>
-                </div>
-                <div>
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="Logo Partner" class="h-8 opacity-70">
-                </div>
-            </div>
+            <div class="hidden md:block md:w-1/2"></div>
         </div>
 
-        <div class="md:w-1/2"></div>
-
-        <a href="https://wa.me/nomor-anda" class="absolute -bottom-8 -right-4">
-            <img src="{{ asset('assets/img/WhatsApp.png') }}" alt="WhatsApp" class="w-12 h-12 hover:scale-110 transition">
-        </a>
+        <div class="fixed bottom-6 right-6 z-50">
+            <a href="https://wa.me/nomor-anda" class="block hover:scale-110 transition duration-300">
+                <img src="{{ asset('assets/img/WhatsApp.png') }}" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16">
+            </a>
+        </div>
     </div>
 </section>
 <section class="max-w-7xl mx-auto px-10 py-8">
