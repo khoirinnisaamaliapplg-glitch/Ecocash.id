@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/png" href="{{ asset('assets/img/logoe.png') }}">
-    <title>EcoCash - Kelola Sampah Jadi Uang</title>
+    <title>EcoCash Indonesia - Kelola Sampah Jadi Uang</title>
     
     {{-- <link rel="stylesheet" href="{{ asset('css/globals.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styleguide.css') }}"> --}}
