@@ -99,7 +99,7 @@
             
             <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                    Ubah Sampah Jadi Uang
+                    Ubah Sampah <br>Jadi Uang
                 </h1>
                 <p class="text-base md:text-lg text-gray-700 leading-relaxed">
                     Platform pengelolaan sampah berbasis AI, IoT, dan ekonomi sirkular untuk menciptakan lingkungan yang lebih bersih dan bernilai ekonomi.
