@@ -23,14 +23,16 @@
 </head>
 <body class="bg-white">
 
-    <nav class="bg-white shadow-sm w-full">
-    <div class="max-w-7xl mx-auto flex items-center px-6 lg:px-10 py-4">
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<nav class="bg-white shadow-sm w-full" x-data="{ openSidebar: false }">
+    <div class="max-w-7xl mx-auto flex items-center px-4 md:px-10 py-4">
         
         <div class="flex items-center mr-12">
             <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="h-10">
         </div>
 
-        <div class="flex items-center space-x-8">
+        <div class="hidden md:flex items-center space-x-8">
             @foreach(['Cara Kerja', 'Solusi', 'Edukasi', 'Partner'] as $item)
                 <div class="relative group">
                     <button class="flex items-center text-gray-700 hover:text-teal-500 font-medium transition">
@@ -41,20 +43,41 @@
             @endforeach
         </div>
 
-        <div class="flex items-center space-x-6 ml-auto">
+        <button class="md:hidden ml-auto p-2 text-gray-700" @click="openSidebar = true">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+
+        <div class="hidden md:flex items-center space-x-6 ml-auto">
             <div class="flex items-center text-gray-600 cursor-pointer">
                 <span>🌐 ID</span>
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
-            
             <a href="https://wa.me/nomor-anda" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2 rounded-lg flex items-center shadow-md transition font-semibold">
                 <img src="{{ asset('assets/img/wa.png') }}" alt="WhatsApp" class="w-5 h-5 mr-2">
                 WhatsApp kami
             </a>
         </div>
     </div>
+
+    <div x-show="openSidebar" class="fixed inset-0 z-50 md:hidden" x-cloak>
+        <div class="absolute inset-0 bg-gray-900 bg-opacity-50" @click="openSidebar = false"></div>
+        
+        <div class="absolute right-0 top-0 h-full w-64 bg-white p-6 shadow-2xl">
+            <button class="mb-6 text-gray-600" @click="openSidebar = false">✕ Tutup</button>
+            <div class="flex flex-col space-y-6">
+                @foreach(['Cara Kerja', 'Solusi', 'Edukasi', 'Partner'] as $item)
+                    <button class="text-left text-gray-700 font-medium">{{ $item }}</button>
+                @endforeach
+                <div class="pt-6 border-t">
+                    <a href="https://wa.me/nomor-anda" class="bg-teal-500 text-white px-5 py-3 rounded-lg flex items-center justify-center font-semibold">
+                        WhatsApp kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </nav>
-  <section class="relative w-full py-20 bg-cover bg-center" 
+  <section class="grid grid-cols-1 lg:grid-cols-2 relative w-full py-20 bg-cover bg-center" 
          style="background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%), url('{{ asset('assets/img/br.jpeg') }}');">
     
     <div class="relative max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center">
@@ -102,9 +125,9 @@
         </div>
 
         <div class="flex items-center justify-between">
-            <div class="flex items-center">
+            {{-- <div class="flex items-center">
                 <img src="{{ asset('assets/img/logoDS.png') }}" class="h-10 grayscale hover:grayscale-0 transition" alt="Sponsor">
-            </div>
+            </div> --}}
 
             <a href="#" class="text-teal-500 font-bold flex items-center hover:text-teal-700 transition">
                 Customer story 
@@ -483,8 +506,8 @@
             <div>
                 <h4 class="font-bold text-gray-900 mb-6 uppercase tracking-wider text-sm">Kontak</h4>
                 <ul class="space-y-3 text-gray-600 text-sm">
-                    <li>WhatsApp: 08128829993</li>
-                    <li>email: ideasedvolution@gmail.com</li>
+                    <li>WhatsApp: 081214161614</li>
+                    <li>Email : info@edvolution-technology.com</li>
                 </ul>
             </div>
         </div>
@@ -514,7 +537,7 @@
                     </a>
                 </div>
                 <p class="text-gray-500 text-xs">
-                    Bandung<br>Jl. A. Yani No.271A, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114
+                    Bandung<br>Bumi Panyawangan, Jl. Garcinia Indah III no. 13, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393
                 </p>
             </div>
 
