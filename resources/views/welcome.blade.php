@@ -554,7 +554,9 @@
                     </a>
                 </div>
                 <p class="text-gray-500 text-xs">
-                    Bandung<br>Bumi Panyawangan, Jl. Garcinia Indah III no. 13, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393
+                    PT Ideas Edvolution Technology<br>
+                    7358469102 <br>
+                    Bandung,Bumi Panyawangan, Jl. Garcinia Indah III no. 13, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393
                 </p>
             </div>
 
