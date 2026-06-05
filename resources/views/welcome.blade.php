@@ -45,7 +45,7 @@
             <button class="text-gray-600 hover:text-teal-600 font-medium flex items-center">
                 🌐 ID <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
             </button>
-            <a href="https://wa.me/nomor-anda" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-full flex items-center shadow-lg shadow-teal-500/30 transition-all font-semibold">
+            <a href="https://wa.me/6281214161614" class="bg-teal-500 hover:bg-teal-600 text-white px-5 py-2.5 rounded-full flex items-center shadow-lg shadow-teal-500/30 transition-all font-semibold">
                 WhatsApp kami
             </a>
         </div>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="mt-auto pt-6 border-t">
-                <a href="https://wa.me/nomor-anda" class="w-full bg-teal-500 text-white py-3 rounded-xl flex items-center justify-center font-semibold hover:bg-teal-600 transition">
+                <a href="https://wa.me/6281214161614" class="w-full bg-teal-500 text-white py-3 rounded-xl flex items-center justify-center font-semibold hover:bg-teal-600 transition">
                     Hubungi via WhatsApp
                 </a>
             </div>
@@ -204,6 +204,53 @@
             </p>
             <p class="text-lg text-gray-600 leading-relaxed">
                 Pengguna hanya perlu memasukkan sampah yang sesuai, kemudian sistem AI EcoCash akan melakukan verifikasi jenis material sebelum reward diberikan ke akun pengguna.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section class="max-w-7xl mx-auto px-10 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        <div class="space-y-6">
+            <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+                Revolusi Pengelolaan Sampah <br> dengan EcoCash Box
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                EcoCash Box hadir sebagai solusi inovatif yang menggabungkan manajemen keuangan digital dengan sistem pengelolaan sampah yang efisien. Melalui aplikasi, Anda dapat mengelola transaksi dan reward langsung dari smartphone secara praktis dan modern.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Dengan dukungan teknologi AIoT, EcoCash Box memberikan pengalaman pengelolaan yang lebih cepat, transparan, dan akurat. Kami berkomitmen mendukung gaya hidup berkelanjutan serta memperkuat ekonomi sirkular di Indonesia melalui integrasi teknologi pintar.
+            </p>
+        </div>
+
+        <div class="relative flex justify-center lg:justify-end">
+            <img src="{{ asset('assets/img/box.png') }}" alt="EcoCash App Mockup" class="w-full max-w-xl">
+        </div>
+
+    </div>
+</section>
+<section class="max-w-7xl mx-auto px-10 py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="w-full">
+            <img src="{{ asset('assets/img/truk.png') }}" 
+                 alt="Smart Waste Collection Truck" 
+                 class="w-full h-auto rounded-3xl shadow-lg object-cover">
+        </div>
+
+        <div class="space-y-6">
+            <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+                Armada Smart Truck EcoCash
+            </h2>
+            <h3 class="text-2xl font-semibold text-gray-800">
+                Apa itu Smart Truck EcoCash?
+            </h3>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Smart Truck EcoCash adalah armada pengangkut sampah pintar yang dilengkapi dengan teknologi AIoT untuk mengoptimalkan rute dan efisiensi pengumpulan sampah secara real-time.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Truk ini berfungsi sebagai titik penjemputan bergerak yang terintegrasi dengan sistem Manajemen Keuangan Digital kami. Setiap sampah yang dikumpulkan akan diverifikasi secara otomatis, dan reward digital akan langsung dikreditkan ke akun pengguna, memastikan proses daur ulang yang transparan dan efisien.
             </p>
         </div>
 
