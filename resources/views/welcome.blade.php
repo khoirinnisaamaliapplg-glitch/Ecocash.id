@@ -550,14 +550,18 @@
                         <img src="{{ asset('assets/img/TikTok.png') }}" class="w-8 h-8" alt="TikTok">
                     </a>
                     <a href="#" class="hover:opacity-80 transition">
-                        <img src="{{ asset('assets/img/YouTube.png') }}" class="w-8 h-8" alt="TikTok">
+                        <img src="{{ asset('assets/img/YouTube.png') }}" class="w-8 h-8" alt="YouTube">
                     </a>
                 </div>
-                <p class="text-gray-500 text-xs">
-                    PT Ideas Edvolution Technology<br>
-                    7358469102 <br>
-                    Bandung,Bumi Panyawangan, Jl. Garcinia Indah III no. 13, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393
-                </p>
+                <div class="text-gray-500 text-xs space-y-1">
+                    <p class="font-semibold text-gray-700">PT Ideas Edvolution Technology</p>
+                    <p>
+                        <span class="font-bold">BSI:</span> 7358469102 <br>
+                        <span class="font-bold">A.N:</span> PT Ideas Edvolution Technology
+                    </p>
+                    <p>Bandung, Bumi Panyawangan, Jl. Garcinia Indah III no. 13, 
+                        Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393</p>
+                </div>
             </div>
 
             <div class="space-y-4">
