@@ -128,7 +128,7 @@
         </div>
 
         <div class="fixed bottom-6 right-6 z-50">
-            <a href="https://wa.me/nomor-anda" class="block hover:scale-110 transition duration-300">
+            <a href="https://wa.me/6281214161614" class="block hover:scale-110 transition duration-300">
                 <img src="{{ asset('assets/img/WhatsApp.png') }}" alt="WhatsApp" class="w-14 h-14 md:w-16 md:h-16">
             </a>
         </div>
