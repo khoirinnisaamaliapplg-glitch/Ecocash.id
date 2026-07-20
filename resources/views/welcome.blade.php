@@ -208,6 +208,31 @@
         </div>
 
     </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+    <!-- Item 1 -->
+    <div class="flex flex-col gap-2">
+        <img src="{{ asset('assets/img/jabar.jpeg') }}" alt="Jawa Barat" class="w-full h-40 object-cover rounded-2xl shadow-md">
+        <p class="text-sm font-medium text-gray-700 text-center">Smart Container Jawa Barat</p>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="flex flex-col gap-2">
+        <img src="{{ asset('assets/img/aceh.jpeg') }}" alt="Aceh" class="w-full h-40 object-cover rounded-2xl shadow-md">
+        <p class="text-sm font-medium text-gray-700 text-center">Smart Container Aceh</p>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="flex flex-col gap-2">
+        <img src="{{ asset('assets/img/surabaya.jpeg') }}" alt="Surabaya" class="w-full h-40 object-cover rounded-2xl shadow-md">
+        <p class="text-sm font-medium text-gray-700 text-center">Smart Container Surabaya</p>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="flex flex-col gap-2">
+        <img src="{{ asset('assets/img/medan.jpeg') }}" alt="Medan" class="w-full h-40 object-cover rounded-2xl shadow-md">
+        <p class="text-sm font-medium text-gray-700 text-center">Smart Container Medan</p>
+    </div>
+</div>
 </section>
 <section class="max-w-7xl mx-auto px-10 py-20">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
